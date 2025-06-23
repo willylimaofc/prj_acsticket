@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-20T19:17:02.469Z",
+    "end": "2025-06-20T19:17:09.268Z",
+    "duration": 6799,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6a873607-91d7-4420-b7c3-1805240cfa7b",
+      "title": "",
+      "fullFile": "cypress/e2e/cadastro-login.cy.js",
+      "file": "cypress/e2e/cadastro-login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6d0b2ef7-a0c6-448a-b8b4-ca1fe6840ee2",
+          "title": "Tela de Cadastro - Criar nova conta",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve mostrar erro se as senhas forem diferentes",
+              "fullTitle": "Tela de Cadastro - Criar nova conta Deve mostrar erro se as senhas forem diferentes",
+              "timedOut": null,
+              "duration": 1960,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"Seu nome completo\"]').type('Conta Erro');\ncy.get('input[placeholder=\"seu@email.com\"]').type('erro@example.com');\ncy.get('input[placeholder=\"Digite sua senha\"]').type('Senha123');\ncy.get('input[placeholder=\"Confirme sua senha\"]').type('SenhaDiferente');\n// Marca o checkbox de concordância com termos\ncy.get('input[type=\"checkbox\"]').check({\n  force: true\n});\n// Clica no botão de criar conta\ncy.contains('button', 'Criar conta').click();\n// Validacao de mensagem de erro \ncy.contains('As senhas não coincidem').should('be.visible');",
+              "err": {},
+              "uuid": "6b66dff0-3407-40ae-bed8-bac63b1446fe",
+              "parentUUID": "6d0b2ef7-a0c6-448a-b8b4-ca1fe6840ee2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve preencher todos os campos obrigatórios e criar conta com sucesso",
+              "fullTitle": "Tela de Cadastro - Criar nova conta Deve preencher todos os campos obrigatórios e criar conta com sucesso",
+              "timedOut": null,
+              "duration": 3017,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const emailUnico = `qa_${Date.now()}@example.com`;\ncy.get('input[placeholder=\"Seu nome completo\"]').type('QA Automação');\ncy.get('input[placeholder=\"seu@email.com\"]').type(emailUnico);\ncy.get('input[placeholder=\"Digite sua senha\"]').type('SenhaSegura123!');\ncy.get('input[placeholder=\"Confirme sua senha\"]').type('SenhaSegura123!');\n// Marca o checkbox de concordância com termos\ncy.get('input[type=\"checkbox\"]').check({\n  force: true\n});\n// Clica no botão de criar conta\ncy.contains('button', 'Criar conta').click();\n// Espera a tela carregar após login\ncy.contains('Dashboard & Analytics').should('be.visible');",
+              "err": {},
+              "uuid": "2564cde9-56df-4517-94b5-dc4dbe08b2f9",
+              "parentUUID": "6d0b2ef7-a0c6-448a-b8b4-ca1fe6840ee2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar mensagem de conta ja existente",
+              "fullTitle": "Tela de Cadastro - Criar nova conta Validar mensagem de conta ja existente",
+              "timedOut": null,
+              "duration": 1748,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"Seu nome completo\"]').type('QA Automação');\ncy.get('input[placeholder=\"seu@email.com\"]').type('QA@example.com');\ncy.get('input[placeholder=\"Digite sua senha\"]').type('SenhaSegura123!');\ncy.get('input[placeholder=\"Confirme sua senha\"]').type('SenhaSegura123!');\n// Marca o checkbox de concordância com termos\ncy.get('input[type=\"checkbox\"]').check({\n  force: true\n});\n// Clica no botão de criar conta\ncy.contains('button', 'Criar conta').click();\n//Valida mensagem de conta ja registrada\ncy.contains('User already registered').should('be.visible');",
+              "err": {},
+              "uuid": "5c180011-4bff-417b-8811-c82f65a63789",
+              "parentUUID": "6d0b2ef7-a0c6-448a-b8b4-ca1fe6840ee2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6b66dff0-3407-40ae-bed8-bac63b1446fe",
+            "2564cde9-56df-4517-94b5-dc4dbe08b2f9",
+            "5c180011-4bff-417b-8811-c82f65a63789"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6725,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
