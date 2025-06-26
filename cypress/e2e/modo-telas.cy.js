@@ -13,10 +13,11 @@ describe('Menu do Usuário - Perfil e Logout', () => {
   })
 
     it('Deve acessar o My Profile', () => {
-    
-    cy.contains('Toggle theme').should('exist')
+
+    cy.contains('button', 'Switch to light theme').should('exist')
     cy.wait(1000) // espera 1 segundo antes de continuar
-    cy.contains('Toggle theme').click()
+     cy.contains('button', 'Switch to light theme').click()
+   
 
      })
 })

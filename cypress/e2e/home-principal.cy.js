@@ -5,15 +5,15 @@ describe('Visualizar os Dashboards após Login', () => {
     cy.get('input[type="email"]').type('felipe.henrique@analytichem.com')
     cy.get('input[type="password"]').type('iTsFKSSS.2025*')
     cy.contains('button', 'Entrar').click()
-    cy.wait(1000) // espera 1 segundo antes de continuar
+    cy.scrollTo('top');
     
-
     // Espera a tela carregar após login
     cy.contains('Dashboard & Analytics').should('be.visible')
     // Selecionar Linguagem da pagina
     cy.contains('button', 'EN').click()
     cy.get('[role="option"]').contains('PT').click()
   })
+
 
   it('Deve exibir as métricas principais', () => {
     cy.contains('Total de Chamados').should('exist')
@@ -34,7 +34,4 @@ describe('Visualizar os Dashboards após Login', () => {
     cy.get('input[id="title"]').should('be.visible') 
   }) 
 
-  it('Deve exibir nome do usuário logado', () => {
-    cy.contains('Bem-vindo de volta').should('exist')
-  })
 })

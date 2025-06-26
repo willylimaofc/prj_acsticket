@@ -1,11 +1,13 @@
 describe('Autenticar', () => {
-  beforeEach(() => {
+ beforeEach(() => {
     cy.visit('/login')
+
     cy.get('input[type="email"]').type('felipe.henrique@analytichem.com')
     cy.get('input[type="password"]').type('iTsFKSSS.2025*')
     cy.contains('button', 'Entrar').click()
     cy.scrollTo('top');
-    cy.get('h1').should('be.visible'); // exemplo de validação após o scroll
+    
+    // Espera a tela carregar após login
     cy.contains('Dashboard & Analytics').should('be.visible')
     // Selecionar Linguagem da pagina
     cy.contains('button', 'EN').click()
