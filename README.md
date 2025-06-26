@@ -6,39 +6,7 @@ Este projeto serve para realizar testes automatizados de ponta a ponta (E2E) na 
 
 ## 📂 Estrutura do Projeto
 
-prj_acsticket/
-├── cypress/
-│   ├── e2e/
-│   │   ├── area-cliente.cy.js
-│   │   ├── base-conhecimento.cy.js
-│   │   ├── cadastro-login.cy.js
-│   │   ├── criar-ticket.cy.js
-│   │   ├── gerenciamento-tarefas.cy.js
-│   │   ├── home-principal.cy.js
-│   │   ├── integracoes.cy.js
-│   │   ├── login.cy.js
-│   │   ├── modo-telas.cy.js
-│   │   ├── reabertura-ticket.cy.js
-│   │   ├── visualizar-ticket.cy.js
-│   │   └── Perfis_de_contas.cy.js
-│   ├── fixtures/
-│   │   └── (massas de dados para os testes)
-│   ├── reports/
-│   │   └── (relatórios gerados dos testes)
-│   ├── screenshots/
-│   │   ├── area-cliente.cy.js/
-│   │   ├── criar-ticket.cy.js/
-│   │   ├── home-principal.cy.js/
-│   │   └── visualizar-ticket.cy.js/
-│   └── support/
-│       └── (comandos e utilitários do Cypress)
-├── downloads/                  # (pasta auxiliar, se usada para evidências)
-├── node_modules/               # Dependências instaladas via npm
-├── cypress.config.js           # Configurações do Cypress
-├── package.json                # Dependências e scripts do projeto
-├── package-lock.json           # Controle de versão das dependências
-├── .gitignore                  # Arquivos e pastas ignorados pelo Git
-└── README.md                   # Documentação principal do projeto
+<pre> ```bash prj_acsticket/ ├── cypress/ │ ├── e2e/ │ │ ├── area-cliente.cy.js │ │ ├── base-conhecimento.cy.js │ │ ├── cadastro-login.cy.js │ │ ├── criar-ticket.cy.js │ │ ├── gerenciamento-tarefas.cy.js │ │ ├── home-principal.cy.js │ │ ├── integracoes.cy.js │ │ ├── login.cy.js │ │ ├── modo-telas.cy.js │ │ ├── reabertura-ticket.cy.js │ │ ├── visualizar-ticket.cy.js │ │ └── Perfis_de_contas.cy.js │ ├── fixtures/ │ │ └── (massas de dados para os testes) │ ├── reports/ │ │ └── (relatórios gerados dos testes) │ ├── screenshots/ │ │ ├── area-cliente.cy.js/ │ │ ├── criar-ticket.cy.js/ │ │ ├── home-principal.cy.js/ │ │ └── visualizar-ticket.cy.js/ │ └── support/ │ └── (comandos e utilitários do Cypress) ├── downloads/ # (pasta auxiliar, se usada para evidências) ├── node_modules/ # Dependências instaladas via npm ├── cypress.config.js # Configurações do Cypress ├── package.json # Dependências e scripts do projeto ├── package-lock.json # Controle de versão das dependências ├── .gitignore # Arquivos e pastas ignorados pelo Git └── README.md # Documentação principal do projeto ``` </pre>
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
