@@ -10,7 +10,7 @@ describe('Autenticar', () => {
     // Espera a tela carregar após login
     cy.contains('Dashboard & Analytics').should('be.visible')
     // Selecionar Linguagem da pagina
-    cy.contains('button', 'EN').click()
+    cy.contains('button', 'PT').click()
     cy.get('[role="option"]').contains('PT').click()
   })
 

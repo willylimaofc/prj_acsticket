@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-26T19:59:00.776Z",
+    "end": "2025-06-26T19:59:04.304Z",
+    "duration": 3528,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6ae0f02a-69f4-4dc7-96f3-6c40291491c4",
+      "title": "",
+      "fullFile": "cypress/e2e/modo-telas.cy.js",
+      "file": "cypress/e2e/modo-telas.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5eb2f64c-bfd8-43e3-8d3c-4e47660c59ba",
+          "title": "Menu do Usuário - Perfil e Logout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar o My Profile",
+              "fullTitle": "Menu do Usuário - Perfil e Logout Deve acessar o My Profile",
+              "timedOut": null,
+              "duration": 3454,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('button', 'Switch to light theme').should('exist');\ncy.wait(1000); // espera 1 segundo antes de continuar\ncy.contains('button', 'Switch to light theme').click();",
+              "err": {},
+              "uuid": "3a0ac78a-ac93-4b62-95a6-671f16499af0",
+              "parentUUID": "5eb2f64c-bfd8-43e3-8d3c-4e47660c59ba",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3a0ac78a-ac93-4b62-95a6-671f16499af0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3454,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-26T18:01:05.538Z",
+    "end": "2025-06-26T18:01:13.604Z",
+    "duration": 8066,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "d2fdc223-e897-438b-a899-137f472d4482",
+      "title": "",
+      "fullFile": "cypress/e2e/base-conhecimento.cy.js",
+      "file": "cypress/e2e/base-conhecimento.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0faec1c9-e2e7-4a32-877d-be107a5abaef",
+          "title": "Visualizar os Dashboards após Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve Acessar tela de Base de Conhecimento",
+              "fullTitle": "Visualizar os Dashboards após Login Deve Acessar tela de Base de Conhecimento",
+              "timedOut": null,
+              "duration": 7878,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`\n    at Context.eval (webpack://prj_acsticket/./cypress/e2e/base-conhecimento.cy.js:13:7)",
+                "diff": null
+              },
+              "uuid": "535cd7e0-dbea-4cb5-896b-1cceb7edd01f",
+              "parentUUID": "0faec1c9-e2e7-4a32-877d-be107a5abaef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pesquise algo que não existe na Base de Conhecimento",
+              "fullTitle": "Visualizar os Dashboards após Login Pesquise algo que não existe na Base de Conhecimento",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get('input[placeholder=\"Search articles...\"]').type('Conteúdo que não existe');\ncy.contains('No Articles Found').should('be.visible');",
+              "err": {},
+              "uuid": "f89ba4c6-d713-4345-987d-f7a499e36302",
+              "parentUUID": "0faec1c9-e2e7-4a32-877d-be107a5abaef",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Pesquise algo que existe na Base de Conhecimento e tenha mais de um arquivo",
+              "fullTitle": "Visualizar os Dashboards após Login Pesquise algo que existe na Base de Conhecimento e tenha mais de um arquivo",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get('input[placeholder=\"Search articles...\"]').type('Pass');\ncy.contains('Search Results (2)').should('be.visible');",
+              "err": {},
+              "uuid": "7e8a49d8-6eba-4bec-80a0-362a30eaf37c",
+              "parentUUID": "0faec1c9-e2e7-4a32-877d-be107a5abaef",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Pesquise algo que existe na Base de Conhecimento e tenha apenas um arquivo",
+              "fullTitle": "Visualizar os Dashboards após Login Pesquise algo que existe na Base de Conhecimento e tenha apenas um arquivo",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get('input[placeholder=\"Search articles...\"]').type('all');\ncy.contains('Search Results (1)').should('be.visible');",
+              "err": {},
+              "uuid": "effb5d65-8433-4fd3-a257-3bdeed78395a",
+              "parentUUID": "0faec1c9-e2e7-4a32-877d-be107a5abaef",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Uso a opcao de compartilhar um artigo",
+              "fullTitle": "Visualizar os Dashboards após Login Uso a opcao de compartilhar um artigo",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get(':nth-child(1) > .p-6 > .space-y-4 > .items-start > .lucide-external-link').click();\ncy.contains('button', 'Share').click();\ncy.wait(1000); // espera 1 segundo antes de continuar",
+              "err": {},
+              "uuid": "4e828f55-5814-4e1d-b41e-66f4ea7ff828",
+              "parentUUID": "0faec1c9-e2e7-4a32-877d-be107a5abaef",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Uso a opcao de compartilhar um artigo",
+              "fullTitle": "Visualizar os Dashboards após Login Uso a opcao de compartilhar um artigo",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get(':nth-child(1) > .p-6 > .space-y-4 > .items-start > .lucide-external-link').click();\ncy.contains('button', 'Print').click();\ncy.wait(1000); // espera 1 segundo antes de continuar",
+              "err": {},
+              "uuid": "e5bef061-1093-4c2b-9e5d-72b0e7b6d9d7",
+              "parentUUID": "0faec1c9-e2e7-4a32-877d-be107a5abaef",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "535cd7e0-dbea-4cb5-896b-1cceb7edd01f"
+          ],
+          "pending": [],
+          "skipped": [
+            "f89ba4c6-d713-4345-987d-f7a499e36302",
+            "7e8a49d8-6eba-4bec-80a0-362a30eaf37c",
+            "effb5d65-8433-4fd3-a257-3bdeed78395a",
+            "4e828f55-5814-4e1d-b41e-66f4ea7ff828",
+            "e5bef061-1093-4c2b-9e5d-72b0e7b6d9d7"
+          ],
+          "duration": 7878,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

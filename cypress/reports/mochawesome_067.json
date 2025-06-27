@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-26T18:22:08.733Z",
+    "end": "2025-06-26T18:22:16.426Z",
+    "duration": 7693,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3767fa47-7143-4366-85e1-f97df00473ae",
+      "title": "",
+      "fullFile": "cypress/e2e/integracoes.cy.js",
+      "file": "cypress/e2e/integracoes.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "028fb4c9-bed2-405b-a1aa-bc5d9df4f787",
+          "title": "Visualizar os Dashboards após Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve Acessar tela de Integrações",
+              "fullTitle": "Visualizar os Dashboards após Login Deve Acessar tela de Integrações",
+              "timedOut": null,
+              "duration": 7493,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Administração').click();\ncy.contains('Integrações').click();\ncy.visit('/integrations');\ncy.contains('Integrações').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`\n    at Context.eval (webpack://prj_acsticket/./cypress/e2e/integracoes.cy.js:14:7)",
+                "diff": null
+              },
+              "uuid": "a002d63f-9917-42c1-b54c-230f5140bbb9",
+              "parentUUID": "028fb4c9-bed2-405b-a1aa-bc5d9df4f787",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve ativar uma das \"Integrações\"",
+              "fullTitle": "Visualizar os Dashboards após Login Deve ativar uma das \"Integrações\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Administração').click();\ncy.contains('Integrações').click();\ncy.visit('/integrations');\ncy.contains('Integrações').should('be.visible');\n//Ativacao multipla de integrações desativadas\ncy.get('button[type=\"button\"][role=\"switch\"][data-state=\"unchecked\"]').first().click();\ncy.get('button[type=\"button\"][role=\"switch\"]').first().should('have.attr', 'data-state', 'checked');\ncy.wait(1000); // espera 1 segundo antes de continuar",
+              "err": {},
+              "uuid": "1f3137b1-7382-4a7d-8fbc-2d8a1e04c54c",
+              "parentUUID": "028fb4c9-bed2-405b-a1aa-bc5d9df4f787",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Acessar opcao de configuração de uma integração",
+              "fullTitle": "Visualizar os Dashboards após Login Acessar opcao de configuração de uma integração",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Administração').click();\ncy.contains('Integrações').click();\ncy.visit('/integrations');\ncy.contains('Integrações').should('be.visible');\n//Acessar configuração de uma integração\ncy.get('.pt-0 > .space-y-4 > :nth-child(1) > .flex > .text-sm').click();\ncy.contains('Configurar').should('be.visible');\ncy.contains('button', 'Configurar').click();\ncy.wait(1000); // espera 1 segundo antes de continuar\ncy.contains('Webhook URL').should('be.visible');\ncy.contains('Canal').should('be.visible');\ncy.contains('Testar Integração').should('be.visible');",
+              "err": {},
+              "uuid": "bad1ec85-5fec-46ba-b5bf-f655bb8981b8",
+              "parentUUID": "028fb4c9-bed2-405b-a1aa-bc5d9df4f787",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Deve exibir a lista de integrações",
+              "fullTitle": "Visualizar os Dashboards após Login Deve exibir a lista de integrações",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Administração').click();\ncy.contains('Integrações').click();\ncy.visit('/integrations');\ncy.contains('Integrações').should('be.visible');\ncy.get('.pt-0 > .space-y-4 > :nth-child(1)').should('be.visible');",
+              "err": {},
+              "uuid": "66add9c0-93a2-46b0-9b55-4f8c0113e122",
+              "parentUUID": "028fb4c9-bed2-405b-a1aa-bc5d9df4f787",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a002d63f-9917-42c1-b54c-230f5140bbb9"
+          ],
+          "pending": [],
+          "skipped": [
+            "1f3137b1-7382-4a7d-8fbc-2d8a1e04c54c",
+            "bad1ec85-5fec-46ba-b5bf-f655bb8981b8",
+            "66add9c0-93a2-46b0-9b55-4f8c0113e122"
+          ],
+          "duration": 7493,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

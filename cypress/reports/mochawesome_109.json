@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-26T19:26:59.616Z",
+    "end": "2025-06-26T19:27:07.323Z",
+    "duration": 7707,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "73d98384-f1db-480d-b2ac-eb0d9e901d33",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7c43846c-6ec8-481d-bc2f-097d305c640b",
+          "title": "Teste de Login no ACS Ticket",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve fazer login com sucesso",
+              "fullTitle": "Teste de Login no ACS Ticket Deve fazer login com sucesso",
+              "timedOut": null,
+              "duration": 3136,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Acessa a página de login\ncy.visit('/login'); // ou '/' se já cair direto na tela de login\ncy.wait(1000); // espera 1 segundo antes de continuar\n// Preenche o e-mail e a senha\ncy.get('input[type=\"email\"]').type('felipe.henrique@analytichem.com');\ncy.get('input[type=\"password\"]').type('iTsFKSSS.2025*');\n// Clica no botão de login\ncy.contains('button', 'Entrar').click();\n// Valida se foi redirecionado para o dashboard ou se há algum elemento pós-login\ncy.contains('Dashboard & Analytics').should('be.visible');",
+              "err": {},
+              "uuid": "b7638d95-ad1c-4633-b2fa-cf6990436d6a",
+              "parentUUID": "7c43846c-6ec8-481d-bc2f-097d305c640b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve fazer login com senha errada e receber notificacao de erro",
+              "fullTitle": "Teste de Login no ACS Ticket Deve fazer login com senha errada e receber notificacao de erro",
+              "timedOut": null,
+              "duration": 2320,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Acessa a página de login\ncy.visit('/login'); // ou '/' se já cair direto na tela de login\ncy.wait(1000); // espera 1 segundo antes de continuar\n// Preenche o e-mail e a senha\ncy.get('input[type=\"email\"]').type('felipe.henrique@analytichem.com');\ncy.get('input[type=\"password\"]').type('Diferente');\n// Clica no botão de login\ncy.contains('button', 'Entrar').click();\n// valida notificacao de erro\ncy.contains('Invalid login credentials').should('be.visible');",
+              "err": {},
+              "uuid": "cffe53cb-a9e2-4aaa-a3f4-de8740ef8338",
+              "parentUUID": "7c43846c-6ec8-481d-bc2f-097d305c640b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve fazer login com email errada e receber notificacao de erro",
+              "fullTitle": "Teste de Login no ACS Ticket Deve fazer login com email errada e receber notificacao de erro",
+              "timedOut": null,
+              "duration": 2105,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Acessa a página de login\ncy.visit('/login'); // ou '/' se já cair direto na tela de login\ncy.wait(1000); // espera 1 segundo antes de continuar\n// Preenche o e-mail e a senha\ncy.get('input[type=\"email\"]').type('felipe@analytichem.com');\ncy.get('input[type=\"password\"]').type('iTsFKSSS.2025*');\n// Clica no botão de login\ncy.contains('button', 'Entrar').click();\n// valida notificacao de erro\ncy.contains('Invalid login credentials').should('be.visible');",
+              "err": {},
+              "uuid": "c937b751-b955-4f00-ba29-a0ebb01e29e4",
+              "parentUUID": "7c43846c-6ec8-481d-bc2f-097d305c640b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b7638d95-ad1c-4633-b2fa-cf6990436d6a",
+            "cffe53cb-a9e2-4aaa-a3f4-de8740ef8338",
+            "c937b751-b955-4f00-ba29-a0ebb01e29e4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7561,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

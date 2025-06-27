@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-26T18:21:32.778Z",
+    "end": "2025-06-26T18:21:42.745Z",
+    "duration": 9967,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5fdaa8f7-82dd-4c39-a155-c1d7f459eed6",
+      "title": "",
+      "fullFile": "cypress/e2e/cadastro-login.cy.js",
+      "file": "cypress/e2e/cadastro-login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c04ab0dc-80bd-49e7-9a7b-2ba61a8419a5",
+          "title": "Tela de Cadastro - Criar nova conta",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve mostrar erro se as senhas forem diferentes",
+              "fullTitle": "Tela de Cadastro - Criar nova conta Deve mostrar erro se as senhas forem diferentes",
+              "timedOut": null,
+              "duration": 1879,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"Seu nome completo\"]').type('Conta Erro');\ncy.get('input[placeholder=\"seu@email.com\"]').type('erro@example.com');\ncy.get('input[placeholder=\"Digite sua senha\"]').type('Senha123');\ncy.get('input[placeholder=\"Confirme sua senha\"]').type('SenhaDiferente');\n// Marca o checkbox de concordância com termos\ncy.get('input[type=\"checkbox\"]').check({\n  force: true\n});\n// Clica no botão de criar conta\ncy.contains('button', 'Criar conta').click();\n// Validacao de mensagem de erro \ncy.contains('As senhas não coincidem').should('be.visible');",
+              "err": {},
+              "uuid": "5bdd1142-9a1a-406b-a183-10cce43f714b",
+              "parentUUID": "c04ab0dc-80bd-49e7-9a7b-2ba61a8419a5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve preencher todos os campos obrigatórios e criar conta com sucesso",
+              "fullTitle": "Tela de Cadastro - Criar nova conta Deve preencher todos os campos obrigatórios e criar conta com sucesso",
+              "timedOut": null,
+              "duration": 5802,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const emailUnico = `qa_${Date.now()}@example.com`;\ncy.get('input[placeholder=\"Seu nome completo\"]').type('QA Automação');\ncy.get('input[placeholder=\"seu@email.com\"]').type(emailUnico);\ncy.get('input[placeholder=\"Digite sua senha\"]').type('SenhaSegura123!');\ncy.get('input[placeholder=\"Confirme sua senha\"]').type('SenhaSegura123!');\n// Marca o checkbox de concordância com termos\ncy.get('input[type=\"checkbox\"]').check({\n  force: true\n});\n// Clica no botão de criar conta\ncy.contains('button', 'Criar conta').click();\n// Espera a tela carregar após login\ncy.contains('Dashboard & Analytics').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Dashboard & Analytics' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Dashboard & Analytics' but never did.\n    at Context.eval (webpack://prj_acsticket/./cypress/e2e/cadastro-login.cy.js:39:41)",
+                "diff": null
+              },
+              "uuid": "c38a48f5-ba6a-415a-a2c4-fd4d86666e89",
+              "parentUUID": "c04ab0dc-80bd-49e7-9a7b-2ba61a8419a5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar mensagem de conta ja existente",
+              "fullTitle": "Tela de Cadastro - Criar nova conta Validar mensagem de conta ja existente",
+              "timedOut": null,
+              "duration": 2049,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"Seu nome completo\"]').type('QA Automação');\ncy.get('input[placeholder=\"seu@email.com\"]').type('QA@example.com');\ncy.get('input[placeholder=\"Digite sua senha\"]').type('SenhaSegura123!');\ncy.get('input[placeholder=\"Confirme sua senha\"]').type('SenhaSegura123!');\n// Marca o checkbox de concordância com termos\ncy.get('input[type=\"checkbox\"]').check({\n  force: true\n});\n// Clica no botão de criar conta\ncy.contains('button', 'Criar conta').click();\n//Valida mensagem de conta ja registrada\ncy.contains('User already registered').should('be.visible');",
+              "err": {},
+              "uuid": "bde5dbf7-72fd-47c5-8a92-9b95e0e00623",
+              "parentUUID": "c04ab0dc-80bd-49e7-9a7b-2ba61a8419a5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5bdd1142-9a1a-406b-a183-10cce43f714b",
+            "bde5dbf7-72fd-47c5-8a92-9b95e0e00623"
+          ],
+          "failures": [
+            "c38a48f5-ba6a-415a-a2c4-fd4d86666e89"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9730,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

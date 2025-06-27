@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-26T18:28:32.574Z",
+    "end": "2025-06-26T18:28:40.904Z",
+    "duration": 8330,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "849e11ba-ad44-4729-ba41-0e5f97bf8821",
+      "title": "",
+      "fullFile": "cypress/e2e/reabertura-ticket.cy.js",
+      "file": "cypress/e2e/reabertura-ticket.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "064375ff-68d2-4a12-ab28-917b13f6ba6c",
+          "title": "Visualizar os Dashboards após Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve Acessar tela de abertura de tickets",
+              "fullTitle": "Visualizar os Dashboards após Login Deve Acessar tela de abertura de tickets",
+              "timedOut": null,
+              "duration": 8086,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Reabertura').click();\ncy.visit('/reopen-requests');\ncy.contains('Solicitações de Reabertura').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`\n    at Context.eval (webpack://prj_acsticket/./cypress/e2e/reabertura-ticket.cy.js:13:7)",
+                "diff": null
+              },
+              "uuid": "e89a5d09-5bf3-48ef-b4ba-e27bb0289017",
+              "parentUUID": "064375ff-68d2-4a12-ab28-917b13f6ba6c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e89a5d09-5bf3-48ef-b4ba-e27bb0289017"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8086,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

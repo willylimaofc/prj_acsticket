@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-26T19:25:11.485Z",
+    "end": "2025-06-26T19:25:23.038Z",
+    "duration": 11553,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f2f191a6-4746-44b6-b054-a9d916d3324f",
+      "title": "",
+      "fullFile": "cypress/e2e/home-principal.cy.js",
+      "file": "cypress/e2e/home-principal.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4644f5cb-12fd-4b36-aa29-28ccef25eabd",
+          "title": "Visualizar os Dashboards após Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve exibir as métricas principais",
+              "fullTitle": "Visualizar os Dashboards após Login Deve exibir as métricas principais",
+              "timedOut": null,
+              "duration": 5356,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Total de Chamados').should('exist');\ncy.contains('Agentes Ativos').should('exist');\ncy.contains('SLA Cumprido').should('exist');",
+              "err": {},
+              "uuid": "a89b7336-7d91-43f4-92e1-babd653e583e",
+              "parentUUID": "4644f5cb-12fd-4b36-aa29-28ccef25eabd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve navegar para Tickets Abertos",
+              "fullTitle": "Visualizar os Dashboards após Login Deve navegar para Tickets Abertos",
+              "timedOut": null,
+              "duration": 2038,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Meus Tickets').click();\ncy.contains('Tickets Abertos').click();\ncy.contains('Open Tickets').should('be.visible');",
+              "err": {},
+              "uuid": "1da77cd6-de6b-4b6d-8069-0a48e956534e",
+              "parentUUID": "4644f5cb-12fd-4b36-aa29-28ccef25eabd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve clicar em + Criar Ticket",
+              "fullTitle": "Visualizar os Dashboards após Login Deve clicar em + Criar Ticket",
+              "timedOut": null,
+              "duration": 3929,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000); // espera 1 segundo antes de continuar\ncy.contains('Criar Ticket').click();\ncy.wait(1000); // espera 1 segundo antes de continuar\ncy.get('input[id=\"title\"]').should('be.visible');",
+              "err": {},
+              "uuid": "6dc6bccd-e3bd-430f-a880-bf92e80e635b",
+              "parentUUID": "4644f5cb-12fd-4b36-aa29-28ccef25eabd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a89b7336-7d91-43f4-92e1-babd653e583e",
+            "1da77cd6-de6b-4b6d-8069-0a48e956534e",
+            "6dc6bccd-e3bd-430f-a880-bf92e80e635b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11323,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-26T18:27:51.607Z",
+    "end": "2025-06-26T18:27:57.349Z",
+    "duration": 5742,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "9b22fbcd-a518-4822-bc40-9394edae6d2d",
+      "title": "",
+      "fullFile": "cypress/e2e/home-principal.cy.js",
+      "file": "cypress/e2e/home-principal.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "da079a41-e326-4141-bbe1-57e2a64ff529",
+          "title": "Visualizar os Dashboards após Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve exibir as métricas principais",
+              "fullTitle": "Visualizar os Dashboards após Login Deve exibir as métricas principais",
+              "timedOut": null,
+              "duration": 5717,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Total de Chamados').should('exist');\ncy.contains('Agentes Ativos').should('exist');\ncy.contains('SLA Cumprido').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Dashboard & Analytics' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Dashboard & Analytics' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`\n    at Context.eval (webpack://prj_acsticket/./cypress/e2e/home-principal.cy.js:11:41)",
+                "diff": null
+              },
+              "uuid": "aea334e1-13f1-46e3-85ad-9d1d983f29ea",
+              "parentUUID": "da079a41-e326-4141-bbe1-57e2a64ff529",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve navegar para Tickets Abertos",
+              "fullTitle": "Visualizar os Dashboards após Login Deve navegar para Tickets Abertos",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Meus Tickets').click();\ncy.contains('Tickets Abertos').click();\ncy.contains('Open Tickets').should('be.visible');",
+              "err": {},
+              "uuid": "c0688a1d-f9ca-49d7-9d63-8b238b6440ae",
+              "parentUUID": "da079a41-e326-4141-bbe1-57e2a64ff529",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Deve clicar em + Criar Ticket",
+              "fullTitle": "Visualizar os Dashboards após Login Deve clicar em + Criar Ticket",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000); // espera 1 segundo antes de continuar\ncy.contains('Criar Ticket').click();\ncy.wait(1000); // espera 1 segundo antes de continuar\ncy.get('input[id=\"title\"]').should('be.visible');",
+              "err": {},
+              "uuid": "b01dc5ef-84a2-4440-9bf2-bb3f2626ccc6",
+              "parentUUID": "da079a41-e326-4141-bbe1-57e2a64ff529",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "aea334e1-13f1-46e3-85ad-9d1d983f29ea"
+          ],
+          "pending": [],
+          "skipped": [
+            "c0688a1d-f9ca-49d7-9d63-8b238b6440ae",
+            "b01dc5ef-84a2-4440-9bf2-bb3f2626ccc6"
+          ],
+          "duration": 5717,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

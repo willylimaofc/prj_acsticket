@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-26T18:54:29.661Z",
+    "end": "2025-06-26T18:54:42.766Z",
+    "duration": 13105,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "7f819fd0-ac17-41e9-93ec-679750536282",
+      "title": "",
+      "fullFile": "cypress/e2e/area-cliente.cy.js",
+      "file": "cypress/e2e/area-cliente.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "635bee68-6c32-4247-ad80-47f4c942d93e",
+          "title": "Menu do Usuário - Perfil e Logout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar o My Profile",
+              "fullTitle": "Menu do Usuário - Perfil e Logout Deve acessar o My Profile",
+              "timedOut": null,
+              "duration": 12968,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Abre o menu de usuário (clicando na imagem/avatar)\ncy.get('#radix-\\\\:rf\\\\:').click();\n// Clica em \"My Profile\"\ncy.contains('Profile').click();\n// Verifica se a URL ou algum conteúdo da página de perfil foi carregado\ncy.url().should('include', '/profile');\ncy.wait(6000); // espera 1 segundo antes de continuar\ncy.contains('Informações Pessoais').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Menu do Usuário - Perfil e ...`",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Menu do Usuário - Perfil e ...`\n    at Context.eval (webpack://prj_acsticket/./cypress/e2e/area-cliente.cy.js:14:7)",
+                "diff": null
+              },
+              "uuid": "49019baf-3afe-4263-ad85-766404d25825",
+              "parentUUID": "635bee68-6c32-4247-ad80-47f4c942d93e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve acessar Settings",
+              "fullTitle": "Menu do Usuário - Perfil e Logout Deve acessar Settings",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#radix-\\\\:rf\\\\:').click();\ncy.wait(1000); // espera 1 segundo antes de continuar\ncy.contains('Settings').click();\ncy.url().should('include', '/settings');",
+              "err": {},
+              "uuid": "18aef9d7-2d0e-4a9d-a3f0-db91af7f492b",
+              "parentUUID": "635bee68-6c32-4247-ad80-47f4c942d93e",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Deve realizar Logout com sucesso",
+              "fullTitle": "Menu do Usuário - Perfil e Logout Deve realizar Logout com sucesso",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#radix-\\\\:rf\\\\:').click();\ncy.wait(1000); // espera 1 segundo antes de continuar\ncy.contains('Log out').click();\n// cy.wait(6000) // espera 1 segundo antes de continuar\ncy.url().should('include', '/login');",
+              "err": {},
+              "uuid": "11cacc85-3697-4399-92d0-015b8027e78d",
+              "parentUUID": "635bee68-6c32-4247-ad80-47f4c942d93e",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "49019baf-3afe-4263-ad85-766404d25825"
+          ],
+          "pending": [],
+          "skipped": [
+            "18aef9d7-2d0e-4a9d-a3f0-db91af7f492b",
+            "11cacc85-3697-4399-92d0-015b8027e78d"
+          ],
+          "duration": 12968,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

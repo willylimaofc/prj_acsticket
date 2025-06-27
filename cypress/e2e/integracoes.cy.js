@@ -11,7 +11,7 @@ describe('Visualizar os Dashboards após Login', () => {
     // Espera a tela carregar após login
     cy.contains('Dashboard & Analytics').should('be.visible')
     // Selecionar Linguagem da pagina
-    cy.contains('button', 'EN').click()
+    cy.contains('button', 'PT').click()
     cy.get('[role="option"]').contains('PT').click()
   })
 
@@ -23,7 +23,7 @@ describe('Visualizar os Dashboards após Login', () => {
   })
 
   it ('Deve ativar uma das "Integrações"', () => { 
-      cy.contains('Administração').click()
+    cy.contains('Administração').click()
     cy.contains('Integrações').click()
     cy.visit('/integrations')
     cy.contains('Integrações').should('be.visible')
@@ -43,7 +43,7 @@ it ('Acessar opcao de configuração de uma integração', () => {
     cy.get('.pt-0 > .space-y-4 > :nth-child(1) > .flex > .text-sm').click()
     cy.contains('Configurar').should('be.visible')  
     cy.contains('button', 'Configurar').click()
-     cy.wait(1000) // espera 1 segundo antes de continuar
+    cy.wait(1000) // espera 1 segundo antes de continuar
     cy.contains('Webhook URL').should('be.visible')
     cy.contains('Canal').should('be.visible')
     cy.contains('Testar Integração').should('be.visible')

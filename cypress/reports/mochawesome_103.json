@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-26T19:10:17.052Z",
+    "end": "2025-06-26T19:10:40.485Z",
+    "duration": 23433,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "834a3bf2-f457-41e1-9eaa-5950bf94f207",
+      "title": "",
+      "fullFile": "cypress/e2e/base-conhecimento.cy.js",
+      "file": "cypress/e2e/base-conhecimento.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e63ef5e5-2559-47aa-985c-cedc17540158",
+          "title": "Visualizar os Dashboards após Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve Acessar tela de Base de Conhecimento",
+              "fullTitle": "Visualizar os Dashboards após Login Deve Acessar tela de Base de Conhecimento",
+              "timedOut": null,
+              "duration": 2994,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');",
+              "err": {},
+              "uuid": "2713697e-cfe0-4990-830f-da2d426f7ae9",
+              "parentUUID": "e63ef5e5-2559-47aa-985c-cedc17540158",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pesquise algo que não existe na Base de Conhecimento",
+              "fullTitle": "Visualizar os Dashboards após Login Pesquise algo que não existe na Base de Conhecimento",
+              "timedOut": null,
+              "duration": 3513,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get('input[placeholder=\"Search articles...\"]').type('Conteúdo que não existe');\ncy.contains('No Articles Found').should('be.visible');",
+              "err": {},
+              "uuid": "f4dce980-7bda-4a49-90e5-a160b60cc7b8",
+              "parentUUID": "e63ef5e5-2559-47aa-985c-cedc17540158",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pesquise algo que existe na Base de Conhecimento e tenha mais de um arquivo",
+              "fullTitle": "Visualizar os Dashboards após Login Pesquise algo que existe na Base de Conhecimento e tenha mais de um arquivo",
+              "timedOut": null,
+              "duration": 3235,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get('input[placeholder=\"Search articles...\"]').type('Pass');\ncy.contains('Search Results (2)').should('be.visible');",
+              "err": {},
+              "uuid": "ee213acd-b744-4653-ac7b-c02bd24c7763",
+              "parentUUID": "e63ef5e5-2559-47aa-985c-cedc17540158",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pesquise algo que existe na Base de Conhecimento e tenha apenas um arquivo",
+              "fullTitle": "Visualizar os Dashboards após Login Pesquise algo que existe na Base de Conhecimento e tenha apenas um arquivo",
+              "timedOut": null,
+              "duration": 3243,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get('input[placeholder=\"Search articles...\"]').type('all');\ncy.contains('Search Results (1)').should('be.visible');",
+              "err": {},
+              "uuid": "e80e495a-616e-4791-95b9-9d937aa9d0fd",
+              "parentUUID": "e63ef5e5-2559-47aa-985c-cedc17540158",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Uso a opcao de compartilhar um artigo",
+              "fullTitle": "Visualizar os Dashboards após Login Uso a opcao de compartilhar um artigo",
+              "timedOut": null,
+              "duration": 5003,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get(':nth-child(1) > .p-6 > .space-y-4 > .items-start > .lucide-external-link').click();\ncy.contains('button', 'Share').click();\ncy.wait(1000); // espera 1 segundo antes de continuar",
+              "err": {},
+              "uuid": "244a5e1c-a002-4da3-bac8-ca60f725d456",
+              "parentUUID": "e63ef5e5-2559-47aa-985c-cedc17540158",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Uso a opcao de compartilhar um artigo",
+              "fullTitle": "Visualizar os Dashboards após Login Uso a opcao de compartilhar um artigo",
+              "timedOut": null,
+              "duration": 5291,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Base de Conhecimento').click();\ncy.visit('/Knowledge');\ncy.contains('Knowledge Base').should('be.visible');\ncy.get(':nth-child(1) > .p-6 > .space-y-4 > .items-start > .lucide-external-link').click();\ncy.contains('button', 'Print').click();\ncy.wait(1000); // espera 1 segundo antes de continuar",
+              "err": {},
+              "uuid": "a3f710ca-8d52-42bc-a213-d62ca7946d64",
+              "parentUUID": "e63ef5e5-2559-47aa-985c-cedc17540158",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2713697e-cfe0-4990-830f-da2d426f7ae9",
+            "f4dce980-7bda-4a49-90e5-a160b60cc7b8",
+            "ee213acd-b744-4653-ac7b-c02bd24c7763",
+            "e80e495a-616e-4791-95b9-9d937aa9d0fd",
+            "244a5e1c-a002-4da3-bac8-ca60f725d456",
+            "a3f710ca-8d52-42bc-a213-d62ca7946d64"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23279,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

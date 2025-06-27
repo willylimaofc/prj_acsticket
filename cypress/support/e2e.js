@@ -18,3 +18,38 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// cypress/support/e2e.js
+
+// Verifica se está rodando em modo headless
+const isHeadless = Cypress.config('isHeadless') || !Cypress.config('headed')
+
+if (isHeadless) {
+  Cypress.on('window:load', (win) => {
+    const style = win.document.createElement('style')
+    style.innerHTML = `
+      *, *::before, *::after {
+        transition-property: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+      }
+    `
+    win.document.head.appendChild(style)
+    
+    // Força a repaint imediata
+    win.document.body.getBoundingClientRect()
+  })
+
+  // Adiciona observer para elementos dinâmicos (SPAs)
+  Cypress.on('window:load', (win) => {
+    new win.MutationObserver(() => {
+      win.document.querySelectorAll('*').forEach(el => {
+        el.style.animation = 'none !important'
+        el.style.transition = 'none !important'
+      })
+    }).observe(win.document.body, {
+      subtree: true,
+      childList: true
+    })
+  })
+}

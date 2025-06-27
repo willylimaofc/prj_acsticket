@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-26T18:17:19.505Z",
+    "end": "2025-06-26T18:17:27.637Z",
+    "duration": 8132,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "d923ac51-22c6-46f3-887c-861b4403f600",
+      "title": "",
+      "fullFile": "cypress/e2e/gerenciamento-tarefas.cy.js",
+      "file": "cypress/e2e/gerenciamento-tarefas.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "38b6c9f6-87d6-4066-a17b-e315ae1f8b4a",
+          "title": "Visualizar os Dashboards após Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve Acessar tela de Gerenciamento de Tarefas",
+              "fullTitle": "Visualizar os Dashboards após Login Deve Acessar tela de Gerenciamento de Tarefas",
+              "timedOut": null,
+              "duration": 7932,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Reabertura').click();\ncy.visit('/todo');\ncy.contains('Gerenciamento de Tarefas').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'EN' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Visualizar os Dashboards ap...`\n    at Context.eval (webpack://prj_acsticket/./cypress/e2e/gerenciamento-tarefas.cy.js:13:7)",
+                "diff": null
+              },
+              "uuid": "d04da094-385c-4af2-a8ea-b4be3b63290b",
+              "parentUUID": "38b6c9f6-87d6-4066-a17b-e315ae1f8b4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve criar uma nova tarefa",
+              "fullTitle": "Visualizar os Dashboards após Login Deve criar uma nova tarefa",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Reabertura').click();\ncy.visit('/todo');\n//Acesso a criacao de nova tarefa\ncy.contains('Gerenciamento de Tarefas').should('be.visible');\ncy.get('button').contains('Nova Tarefa').click();\n//Preenchimento de campos de nova tarefa \ncy.get('input[placeholder=\"Digite um título descritivo para a tarefa...\"]').type('Tarefa criada por automacao QA');\ncy.get('textarea[placeholder=\"Descreva detalhes, objetivos ou instruções específicas para esta tarefa...\"]').type('Descrição de teste automatizado para criação de tarefa dentro do sistema ACS Ticket.');\n// Define prioridade\n// cy.get('button[aria-haspopup=\"listbox\"]').first().click();\n//  cy.contains('Média').click(); // ou Média, Baixa, etc.\n// Seleciona o campo de data e define uma data válida\ncy.get('input[type=\"date\"]#dueDate').type('2025-06-27');\n// Horas estimadas\ncy.get('input[placeholder=\"Ex: 2.5\"]').type('1.5');\ncy.scrollTo('top');\n// 1. Clica no botão do combobox\ncy.contains('button', 'Nenhum ticket').click();\n// 2. Aguarda o dropdown abrir (pode ajustar esse tempo se necessário)\ncy.wait(500); // ou usar `.should('be.visible')` para esperar elemento real\n// 3. Seleciona a opção desejada pelo texto\ncy.contains('TESTE DE AUTOMAÇÃO QA - IT & Technical Support > Feature Request > 🟢 Low').click();\n// Atribui tarefa a um usuário\ncy.contains('button', 'Nenhum usuário atribuído').click();\n// 2. Aguarda o dropdown abrir\ncy.wait(300); // ou use should('be.visible') no menu se preferir\n// 3. Seleciona a opção pelo texto\ncy.contains('qa@example.com').click();\n// Adiciona tag\ncy.get('input[placeholder=\"Digite uma tag e pressione Enter...\"]').type('QA Automatizado{enter}');\ncy.get('button:has(svg.lucide-plus)').click();\ncy.contains('span', 'QA Automatizado').should('exist');\n// Ativa lembrete por e-mail\ncy.get('button[type=\"button\"][role=\"switch\"][data-state=\"unchecked\"]').first().click();\ncy.get('button[type=\"button\"][role=\"switch\"]').first().should('have.attr', 'data-state', 'checked');\n// Clica no botão para criar tarefa\ncy.contains('button', 'Criar Tarefa').click();\n// Validação com sucesso\ncy.contains('Tarefa criada com sucesso').should('be.visible');",
+              "err": {},
+              "uuid": "df573e2a-e801-47ed-9b82-c44ea253f620",
+              "parentUUID": "38b6c9f6-87d6-4066-a17b-e315ae1f8b4a",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d04da094-385c-4af2-a8ea-b4be3b63290b"
+          ],
+          "pending": [],
+          "skipped": [
+            "df573e2a-e801-47ed-9b82-c44ea253f620"
+          ],
+          "duration": 7932,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

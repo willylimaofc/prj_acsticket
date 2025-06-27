@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-26T19:09:39.151Z",
+    "end": "2025-06-26T19:10:14.984Z",
+    "duration": 35833,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3aa229a7-948a-475c-8694-07e5da45e3d8",
+      "title": "",
+      "fullFile": "cypress/e2e/area-cliente.cy.js",
+      "file": "cypress/e2e/area-cliente.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a52e5bdb-63ca-4bbe-97ae-af00ef1818d8",
+          "title": "Menu do Usuário - Perfil e Logout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar o My Profile",
+              "fullTitle": "Menu do Usuário - Perfil e Logout Deve acessar o My Profile",
+              "timedOut": null,
+              "duration": 28692,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Abre o menu de usuário (clicando na imagem/avatar)\ncy.get('#radix-\\\\:rf\\\\:').click();\n// Clica em \"My Profile\"\ncy.contains('Profile').click();\n// Verifica se a URL ou algum conteúdo da página de perfil foi carregado\ncy.url().should('include', '/profile');\ncy.wait(6000); // espera 1 segundo antes de continuar\ncy.contains('Informações Pessoais').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 20000ms: Expected to find content: 'Informações Pessoais' but never did.",
+                "estack": "AssertionError: Timed out retrying after 20000ms: Expected to find content: 'Informações Pessoais' but never did.\n    at Context.eval (webpack://prj_acsticket/./cypress/e2e/area-cliente.cy.js:27:40)",
+                "diff": null
+              },
+              "uuid": "a304eb77-0eda-4b99-848b-d203b5ae1b4c",
+              "parentUUID": "a52e5bdb-63ca-4bbe-97ae-af00ef1818d8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve acessar Settings",
+              "fullTitle": "Menu do Usuário - Perfil e Logout Deve acessar Settings",
+              "timedOut": null,
+              "duration": 3228,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#radix-\\\\:rf\\\\:').click();\ncy.wait(1000); // espera 1 segundo antes de continuar\ncy.contains('Settings').click();\ncy.url().should('include', '/settings');",
+              "err": {},
+              "uuid": "0231e802-d78d-4ed9-a3a6-ba7d3ac66b36",
+              "parentUUID": "a52e5bdb-63ca-4bbe-97ae-af00ef1818d8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve realizar Logout com sucesso",
+              "fullTitle": "Menu do Usuário - Perfil e Logout Deve realizar Logout com sucesso",
+              "timedOut": null,
+              "duration": 3644,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#radix-\\\\:rf\\\\:').click();\ncy.wait(1000); // espera 1 segundo antes de continuar\ncy.contains('Log out').click();\n// cy.wait(6000) // espera 1 segundo antes de continuar\ncy.url().should('include', '/login');",
+              "err": {},
+              "uuid": "84710587-471e-488a-8fb2-b62551b7cc5a",
+              "parentUUID": "a52e5bdb-63ca-4bbe-97ae-af00ef1818d8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0231e802-d78d-4ed9-a3a6-ba7d3ac66b36",
+            "84710587-471e-488a-8fb2-b62551b7cc5a"
+          ],
+          "failures": [
+            "a304eb77-0eda-4b99-848b-d203b5ae1b4c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 35564,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
