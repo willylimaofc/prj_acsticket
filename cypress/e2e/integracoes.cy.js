@@ -27,6 +27,7 @@ describe('Visualizar os Dashboards após Login', () => {
     cy.contains('Integrações').click()
     cy.visit('/integrations')
     cy.contains('Integrações').should('be.visible')
+    
     //Ativacao multipla de integrações desativadas
     cy.get('button[type="button"][role="switch"][data-state="unchecked"]').first().click();
     cy.get('button[type="button"][role="switch"]').first().should('have.attr', 'data-state', 'checked');
@@ -39,6 +40,7 @@ it ('Acessar opcao de configuração de uma integração', () => {
     cy.contains('Integrações').click()
     cy.visit('/integrations')
     cy.contains('Integrações').should('be.visible')
+   
     //Acessar configuração de uma integração
     cy.get('.pt-0 > .space-y-4 > :nth-child(1) > .flex > .text-sm').click()
     cy.contains('Configurar').should('be.visible')  

@@ -32,10 +32,6 @@ describe('Visualizar os Dashboards após Login', () => {
     cy.get('input[placeholder="Digite um título descritivo para a tarefa..."]').type('Tarefa criada por automacao QA');
     cy.get('textarea[placeholder="Descreva detalhes, objetivos ou instruções específicas para esta tarefa..."]').type('Descrição de teste automatizado para criação de tarefa dentro do sistema ACS Ticket.');
 
-     // Define prioridade
-    // cy.get('button[aria-haspopup="listbox"]').first().click();
-    //  cy.contains('Média').click(); // ou Média, Baixa, etc.
-
     // Seleciona o campo de data e define uma data válida
     cy.get('input[type="date"]#dueDate').type('2025-06-27');
 
