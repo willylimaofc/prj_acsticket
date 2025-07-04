@@ -5,10 +5,9 @@ describe('Menu do Usuário - Perfil e Logout', () => {
    
     cy.get('input[type="email"]').type('felipe.henrique@analytichem.com')
     cy.get('input[type="password"]').type('iTsFKSSS.2025*')
-    cy.contains('button', 'Entrar').click()
+    cy.contains('button', 'Sign In').click()
 
     // Garante que a tela inicial (dashboard) está carregada
-  
     cy.contains('Dashboard & Analytics').should('exist')
   })
 
@@ -16,7 +15,13 @@ describe('Menu do Usuário - Perfil e Logout', () => {
     cy.contains('button', 'Switch to light theme').should('exist')
     cy.wait(1000) // espera 1 segundo antes de continuar
     cy.contains('button', 'Switch to light theme').click()
-   
+     })
+     
+     it ('Acessa opcao de notificações', () => {
+    cy.get('#radix-\\:rc\\:').should('exist')
+    cy.wait(1000) // espera 1 segundo antes de continuar
+    cy.get('#radix-\\:rc\\:').click();
+    cy.contains('Notificações').should('exist');
 
      })
 })
