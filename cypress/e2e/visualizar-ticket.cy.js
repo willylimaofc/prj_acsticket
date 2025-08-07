@@ -14,7 +14,6 @@ describe('Autenticar', () => {
     cy.get('[role="option"]').contains('PT').click()
   })
 
-
   it('Deve navegar para Tickets Abertos', () => {
     cy.contains('Tickets Não Atribuídos').click()
     cy.contains('Expand').should('be.visible')

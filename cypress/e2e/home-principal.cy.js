@@ -14,7 +14,6 @@ describe('Visualizar os Dashboards após Login', () => {
     cy.get('[role="option"]').contains('PT').click()
   })
 
-
   it('Deve exibir as métricas principais', () => {
     cy.contains('Total de Chamados').should('exist')
     cy.contains('Agentes Ativos').should('exist')

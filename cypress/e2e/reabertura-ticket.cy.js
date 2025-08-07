@@ -14,7 +14,6 @@ describe('Visualizar os Dashboards após Login', () => {
     cy.get('[role="option"]').contains('PT').click()
   })
 
-
   it('Deve Acessar tela de abertura de tickets', () => {
     cy.contains('Reabertura').click()
     cy.visit('/reopen-requests')
